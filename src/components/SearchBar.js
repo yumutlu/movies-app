@@ -13,7 +13,7 @@ function Searchbar(props) {
             <form onSubmit={handleFormSubmit}>
                 <div className="form-row mb-5 mt-5">
                     <div className="col-12">
-                        <input onChange={props.searchMovieProp} type="text" className="form-control" placeholder="search" />
+                        <input onChange={props.searchMovieProp} type="text" className="form-control" placeholder="search popular movies.." />
                     </div>
                 </div>
             </form>
