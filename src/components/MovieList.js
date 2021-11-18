@@ -1,12 +1,13 @@
-import React, { Component } from 'react'
+ 
+const MovieList=(props) => {
 
- class MovieList extends Component {
-    render() {
+
+  
         return (
             <div className="row">
 
 {
-    this.props.movies.map((movie)=>
+    props.movies.map((movie)=>
 
  <div key={movie.id} className="col-lg-4">
                   <div className="card mb-4 shadow-sm">
@@ -15,7 +16,7 @@ import React, { Component } from 'react'
                         <h5 className="card-title">{movie.name}</h5>
                         <p  className="card-text">{movie.overview}</p>
                         <div className="d-flex justify-content-between align-items-center">
-                            <button type="button" className="btn btn-md btn-outline-danger">Delete</button>
+                            <button type="button" onClick={()=>props.deleteMovieProp(movie)} className="btn btn-md btn-outline-danger">Delete</button>
                             <h2><span className="badge bg-info">{movie.rating}</span></h2>
                         </div>
                     </div>
@@ -30,7 +31,7 @@ import React, { Component } from 'react'
 
             </div>
         )
-    }
+    
 }
 
 export default MovieList
