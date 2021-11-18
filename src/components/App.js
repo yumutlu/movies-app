@@ -1,5 +1,4 @@
 import React from "react";
-import SearchBar from "./SearchBar";
 import MovieList from "./MovieList";
 
 class App extends React.Component {
@@ -20,7 +19,7 @@ class App extends React.Component {
         imageURL:
           "https://image.tmdb.org/t/p/w600_and_h900_bestv2/jBegA6V243J6HUnpcOILsRvBnGb.jpg",
         overview:
-          "Six months after the events depicted in The Matrix, Neo has proved to be a good omen for the free humans, as more and more humans are being freed from the matrix and brought to Zion, the one and only stronghold of the Resistance. Neo himself has discovered his superpowers including super speed, ability to see the codes of the things inside the matrix and a certain degree of pre-cognition.",
+          "Six oved to be a good omen for the free humans, as more and more humans are being freed from the matrix and brought to Zion, the one and only stronghold of the Resistance. Neo himself has discovered his superpowers including super speed, ability to see the codes of the things inside the matrix and a certain degree of pre-cognition.",
         id: 2,
       },
       {
@@ -57,10 +56,12 @@ class App extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <SearchBar />
           </div>
         </div>
-        <MovieList />
+        <MovieList
+        
+        movies={this.state.movies}
+        />
       </div>
     );
   }
